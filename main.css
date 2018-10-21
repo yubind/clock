@@ -1,5 +1,5 @@
 html {
-    background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+    background: #018DED url(https://images.unsplash.com/photo-1527903789995-dc8ad2ad6de0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=07bd6b04e0df67961667414e72ddf084&auto=format&fit=crop&w=1414&q=80);
     background-size: cover;
     font-family: 'helvetica neue';
     text-align: center;
@@ -20,6 +20,7 @@ html {
     height: 30rem;
     border: 20px solid white;
     border-radius: 50%;
+    background-color: rgba(0, 0, 0, .3);
     margin: 50px auto;
     position: relative;
     padding: 2rem;
@@ -36,21 +37,27 @@ html {
     height: 100%;
     transform: translateY(-3px); /* account for the height of the clock hands */
   }
-
+  
   .hand {
     width: 50%;
     height: 6px;
-    background: black;
+    background: #d3bfb1;
+    border-radius: 20px;
     position: absolute;
     top: 50%;
     transform: rotate(90deg);
     transform-origin: 100%;
     transition: all 0.05s;
-    transition-timing-function: cubic-bezier(0, 0.89, 0.59, 1.13);
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
-
-
-  div.hand.hour-hand {
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  .circle {
+      width: 20px;
+      height: 20px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
   }
